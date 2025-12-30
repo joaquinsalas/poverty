@@ -7,11 +7,11 @@ This repository presents a remote sensing–based pipeline for poverty assessmen
 
 The pipeline is divided into two main stages:
 
-Census-based regression stage
+## Census-based regression stage
 
 A regression model is trained using census reference values corresponding to CONEVAL multidimensional poverty indicators at the municipal level. This model provides a consistent poverty estimation baseline.
 
-Satellite-based inference stage
+## Satellite-based inference stage
 
 In the second stage, Sentinel-2 satellite imagery is linked to the estimated poverty values, enabling poverty prediction at finer spatial resolutions using deep learning models.
 
