@@ -15,13 +15,13 @@ A regression model is trained using census reference values corresponding to CON
 
 In the second stage, Sentinel-2 satellite imagery is linked to the estimated poverty values, enabling poverty prediction at finer spatial resolutions using deep learning models.
 
-# Reproducibility and Code Structure
+# Reproducibility and code structure
 
 This repository provides the source code required to replicate the experiments conducted for each of the evaluated models. For every architecture, an independent notebook is included.
 
 In particular, the notebook based on EfficientNetB3 is proposed as the reference model, serving as the methodological baseline for comparison with the other architectures.
 
-# Notebook Functionality
+# Notebook functionality
 
 Each notebook implements the following components in a structured and reproducible manner:
 
