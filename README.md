@@ -25,15 +25,15 @@ In particular, the notebook based on EfficientNetB3 is proposed as the reference
 
 Each notebook implements the following components in a structured and reproducible manner:
 
-1.- Preprocessing and normalization of Sentinel-2 multispectral imagery
+1.- Preprocessing and normalization of Sentinel-2 multispectral imagery.
 
-2.- Computation of spectral indices and construction of multi-channel inputs
+2.- Computation of spectral indices and construction of multi-channel inputs.
 
-3.- Model-specific training configurations and optimization strategies
+3.- Model-specific training configurations and optimization strategies.
 
-4.- Model performance evaluation using standardized statistical metrics (MSE and R²)
+4.- Model performance evaluation using standardized statistical metrics (MSE and R²).
 
-5.- Estimation of the computational environmental impact using CodeCarbon
+5.- Estimation of the computational environmental impact using CodeCarbon.
 
 # Requirements
 
