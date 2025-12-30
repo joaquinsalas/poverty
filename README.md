@@ -8,9 +8,11 @@ This repository presents a remote sensing–based pipeline for poverty assessmen
 The pipeline is divided into two main stages:
 
 Census-based regression stage
+
 A regression model is trained using census reference values corresponding to CONEVAL multidimensional poverty indicators at the municipal level. This model provides a consistent poverty estimation baseline.
 
 Satellite-based inference stage
+
 In the second stage, Sentinel-2 satellite imagery is linked to the estimated poverty values, enabling poverty prediction at finer spatial resolutions using deep learning models.
 
 # Reproducibility and Code Structure
@@ -23,17 +25,15 @@ In particular, the notebook based on EfficientNetB3 is proposed as the reference
 
 Each notebook implements the following components in a structured and reproducible manner:
 
-Preprocessing and normalization of Sentinel-2 multispectral imagery
+1.- Preprocessing and normalization of Sentinel-2 multispectral imagery
 
-Computation of spectral indices and construction of multi-channel inputs
+2.- Computation of spectral indices and construction of multi-channel inputs
 
-Model-specific training configurations and optimization strategies
+3.- Model-specific training configurations and optimization strategies
 
-Model performance evaluation using standardized statistical metrics (MSE and R²)
+4.- Model performance evaluation using standardized statistical metrics (MSE and R²)
 
-Estimation of the computational environmental impact using CodeCarbon
-
-All notebooks are designed to be executed as-is in JupyterLab, without requiring manual code modifications.
+5.- Estimation of the computational environmental impact using CodeCarbon
 
 # Requirements
 
