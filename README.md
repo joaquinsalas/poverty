@@ -48,3 +48,8 @@ Albumentations
 CodeCarbon
 
 (See individual notebooks for detailed dependencies.)
+
+# Weights
+The weights for the model can be downloaded from https://drive.google.com/drive/folders/1zfHciQVy74tDgzzAtkCHHnb0wp3xAF0L?usp=sharing
+
+
