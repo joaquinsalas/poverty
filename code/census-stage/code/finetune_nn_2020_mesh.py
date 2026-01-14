@@ -4,27 +4,15 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
 from sklearn.metrics import r2_score
 import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import pickle
 import os
-import platform
+
 
 # Set relevant directory locations based on the operating system
-if platform.system() == "Windows":
-    code_dir ='E:/Documents/informs/research/2023.11.16census/code/'
-    local_data_dir ='E:/Documents/informs/research/2023.11.16census/data/'
-    common_data_dir ='E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/INEGI_CPV2020_n9/'
-    global_data_dir ='E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/data/'
-    models_dir ='E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/models/'
-else:
-    # Exxact
-    code_dir ='/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/code/'
-    local_data_dir ='/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/data/'
-    common_data_dir ='/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/INEGI_CPV2020_n9/'
-    global_data_dir ='/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/data/'
-    models_dir ='/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/models/'
+global_data_dir ='../data/'
+models_dir ='../models/'
 
 
 # Load data from CSV

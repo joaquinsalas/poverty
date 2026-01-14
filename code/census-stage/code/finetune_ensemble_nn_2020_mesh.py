@@ -8,21 +8,12 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 import pickle
 import os
-import platform
 
-# Set relevant directory locations based on the operating system
-if platform.system() == "Windows":
-    code_dir = 'E:/Documents/informs/research/2023.11.16census/code/'
-    local_data_dir = 'E:/Documents/informs/research/2023.11.16census/data/'
-    common_data_dir = 'E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/INEGI_CPV2020_n9/'
-    global_data_dir = 'E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/data/'
-    models_dir = 'E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/models/'
-else:
-    code_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/code/'
-    local_data_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/data/'
-    common_data_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/INEGI_CPV2020_n9/'
-    global_data_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/data/'
-    models_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/models/'
+
+# Set relevant directory locations
+common_data_dir = '../INEGI_CPV2020_n9/'
+global_data_dir = '../data/'
+models_dir = '../models/'
 
 # Define the Neural Network model (same as used in the individual NN model)
 class Net(nn.Module):
@@ -223,9 +214,9 @@ for r in responses:
          X_val, y_val,
          X_test, y_test,
          nn_preds_test, xgb_preds_test, svr_preds_test) = prepareDataset(X, y,
-                                                                                          scaler_nn, scaler_xgb, scaler_svr,
-                                                                                          nn_model, xgb_model, svr_model,
-                                                                                          repeat)
+                                                                        scaler_nn, scaler_xgb, scaler_svr,
+                                                                        nn_model, xgb_model, svr_model,
+                                                                        repeat)
 
         best_model = None
         best_val_loss = float('inf')

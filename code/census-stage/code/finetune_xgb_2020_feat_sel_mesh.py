@@ -7,22 +7,10 @@ from xgboost import XGBRegressor
 from sklearn.model_selection import RandomizedSearchCV
 import pickle
 import warnings
-import platform
 
-# Set relevant directory locations based on the operating system
-if platform.system() == "Windows":
-    code_dir = 'E:/Documents/informs/research/2023.11.16census/code/'
-    local_data_dir = 'E:/Documents/informs/research/2023.11.16census/data/'
-    common_data_dir = 'E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/INEGI_CPV2020_n9/'
-    global_data_dir = 'E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/data/'
-    models_dir = 'E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/models/'
-else:
-    # Exxact
-    code_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/code/'
-    local_data_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/data/'
-    common_data_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/INEGI_CPV2020_n9/'
-    global_data_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/data/'
-    models_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/models/'
+# Set relevant directory locations
+global_data_dir = '../data/'
+models_dir = '../models/'
 
 # Load data from CSV
 census_in = global_data_dir + 'inegi_coneval_dataset_2020_common_mesh_20240905.csv'
@@ -38,11 +26,6 @@ thresholds = importance_df['importance'].unique()
 thresholds.sort()
 thresholds = thresholds[::-1]  # Reverse the sorted array for descending order
 
-
-#responses = ["pobreza_2020", "pobreza_extrema_2020", "pobreza_moderada_2020", "carencia_social_2020",
-#             "ingreso_2020", "no_pobres_2020", "rezago_educativo_2020", "servicios_salud_2020",
-#             "seguridad_social_2020", "calidad_vivienda_2020", "servicios_basicos_2020", "alimentacion_2020",
-#             "una_carencia_2020", "tres_carencias_2020", "ingreso_inferior_2020", "ingreso_inferior_minimo_2020"]
 
 responses = ["calidad_vivienda_2020"]
 

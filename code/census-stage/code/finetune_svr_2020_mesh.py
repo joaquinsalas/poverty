@@ -14,20 +14,9 @@ import platform
 from sklearn.exceptions import ConvergenceWarning
 warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
-# Set relevant directory locations based on the operating system
-if platform.system() == "Windows":
-    code_dir = 'E:/Documents/informs/research/2023.11.16census/code/'
-    local_data_dir = 'E:/Documents/informs/research/2023.11.16census/data/'
-    common_data_dir = 'E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/INEGI_CPV2020_n9/'
-    global_data_dir = 'E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/data/'
-    models_dir = 'E:/Documents/informs/research/2023.11.16census/2024.07.29malla470/models/'
-else:
-    # Exxact
-    code_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/code/'
-    local_data_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/data/'
-    common_data_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/INEGI_CPV2020_n9/'
-    global_data_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/data/'
-    models_dir = '/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/models/'
+# Set relevant directory locations
+global_data_dir = '../data/'
+models_dir = '../models/'
 
 # Load data from CSV
 census_in = global_data_dir + 'inegi_coneval_dataset_2020_common_mesh_20240905.csv'
