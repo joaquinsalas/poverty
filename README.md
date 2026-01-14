@@ -1,5 +1,5 @@
 
-# Fine-Scale Poverty Mapping from Satellite Imagery: A Comparative Study of Classical, CNN, Transformer, and Foundation Models
+# A Two-Stage Approach to Improve Poverty Mapping Spatial Resolution
 
 # Overview
 
