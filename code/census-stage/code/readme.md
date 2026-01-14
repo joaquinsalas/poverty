@@ -1,17 +1,18 @@
-# Meshgrid-level finetuning (CPV 2020)
+# Municipal level estimation of poverty 
 
-Scripts to finetune classical + NN regressors for poverty indicators on the 469 m meshgrid.
+Using the Census of Population and Dwellings, these scripts construct classical + NN regressors to estimate the official indicators for the multidimensional poverty model at the municipal level. The constructed models are then used to label the 469 m cells of the geostatistical national meshgrid.
 
 ## Scripts
 
 In all cases, the scripts look for the best hyperparameters for the corresponding methods.
 
-1. finetune_nn_2020_mesh.py. Regressor based on a Neural Networks
-2. finetune_svr_2020_mesh.py. Regressor based on a Support Vector Regressor
-3. finetune_xgb_2020_mesh.py. Regressor based on a Extreme Gradient Boosting
-4. finetune_ensemble_nn_2020_mesh.py. Ensemble of regressors based on a Neural Netowork
-5. xgb_feature_selector_SHAP_2020_mesh.py. Study of feature importance based on Extreme Gradient Boosting
-6. finetune_xgb_2020_feat_sel_mesh.py. Regressors based on Extreme Gradient Boosting and the most important features
+1. finetune_nn_2020.py. Regressor based on a Neural Networks
+2. finetune_svr_2020.py. Regressor based on a Support Vector Regressor
+3. finetune_xgb_2020.py. Regressor based on a Extreme Gradient Boosting
+4. finetune_ensemble_nn_2020.py. Ensemble of regressors based on a Neural Netowork
+5. xgb_feature_selector_SHAP_2020.py. Study of feature importance based on Extreme Gradient Boosting
+6. finetune_xgb_2020_feat_sel.py. Regressors based on Extreme Gradient Boosting and the most important features
+7. inference_xgb_feat_sel_2020_mesh.py. Evaluate the meshgrid cells with the xgb regressor trained at municipal level. This regressor takes the census information present at grid cell level.
 
 ## File directory structure
 
@@ -25,12 +26,13 @@ census-stage/
   models/    (created automatically)
   figures/   (created automatically)
   code/
-    finetune_nn_2020_mesh.py
-    finetune_svr_2020_mesh.py
-    finetune_xgb_2020_mesh.py
-    finetune_ensemble_nn_2020_mesh.py
-    xgb_feature_selector_SHAP_2020_mesh.py
-    finetune_xgb_2020_feat_sel_mesh.py
+    finetune_nn_2020.py
+    finetune_svr_2020.py
+    finetune_xgb_2020.py
+    finetune_ensemble_nn_2020.py
+    xgb_feature_selector_SHAP_2020.py
+    finetune_xgb_2020_feat_sel.py
+    inference_xgb_feat_sel_2020_mesh.py
 
 
 > All scripts assume relative paths `../data`, `../models`, `../figures` from inside `src/`.
@@ -42,12 +44,13 @@ census-stage/
 From `census-stage/code/`:
 
 ```bash
-python finetune_xgb_2020_mesh.py
-python finetune_svr_2020_mesh.py
-python finetune_nn_2020_mesh.py
-python finetune_ensemble_nn_2020_mesh.py
-python xgb_feature_selector_SHAP_2020_mesh.py
-python finetune_xgb_2020_feat_sel_mesh.py
+python finetune_xgb_2020.py
+python finetune_svr_2020.py
+python finetune_nn_2020.py
+python finetune_ensemble_nn_2020.py
+python xgb_feature_selector_SHAP_2020.py
+python finetune_xgb_2020_feat_sel.py
+python inference_xgb_feat_sel_2020_mesh.py
 
 
 
