@@ -20,7 +20,6 @@ Trains an **XGBRegressor** using **raw Sentinel-2 bands only**.
 - Hyperparameter search via `RandomizedSearchCV` (GPU `tree_method="gpu_hist"`)
 - Saves model, scaler, and a one-row CSV summary with test R² + best params
 
-:contentReference[oaicite:0]{index=0}
 
 ---
 
@@ -35,7 +34,6 @@ Inference-only evaluation + **CO₂ per-item emissions** for the trained 12-band
   (repeated full-test inference; reports mean/median grams CO₂e per item)
 - Writes emissions CSV into `../data/emissions/`
 
-:contentReference[oaicite:1]{index=1}
 
 ---
 
@@ -48,7 +46,6 @@ Trains an **XGBRegressor** using **raw Sentinel-2 bands plus spectral indices** 
 - Same 50/50 split, standardization, and GPU RandomizedSearchCV workflow
 - Saves model/scaler and a CSV summary
 
-:contentReference[oaicite:2]{index=2}
 
 ---
 
@@ -61,7 +58,6 @@ Inference-only evaluation + CO₂ per-item emissions for the trained index-augme
 - Computes test R² (inference-only)
 - Measures grams CO₂e per item using CodeCarbon (offline), saved under `../data/emissions/`
 
-:contentReference[oaicite:3]{index=3}
 
 ---
 
