@@ -1,8 +1,3 @@
----
-title: Sentinel-2 → Multidimensional poverty model regression with Vision Transformers (ViT)
-description: Mesh-level poverty regression using Sentinel-2 imagery and standard Vision Transformer baselines.
----
-
 # Sentinel-2 → CONEVAL regression (ViT)
 
 This folder contains scripts to train and evaluate **Vision Transformer (ViT) regression models** for predicting **mesh-level poverty indicators** from **Sentinel-2A image patches** at 469 m resolution.  
