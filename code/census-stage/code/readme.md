@@ -17,6 +17,7 @@ In all cases, the scripts look for the best hyperparameters for the correspondin
 
 The following text aims to decribe the file structure layout
 
+```text
 census-stage/
   data/
     inegi_coneval_dataset_2020_common_mesh_20240905.csv
