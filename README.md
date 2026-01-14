@@ -9,7 +9,9 @@ The pipeline is divided into two main stages:
 
 ## Census-based regression stage
 
-A regression model is trained using census reference values corresponding to CONEVAL multidimensional poverty indicators at the municipal level. This model provides a consistent poverty estimation baseline.
+In the first stage, a regression framework is trained using census reference data associated with multidimensional poverty indicators at the municipal level.
+
+The implementation of this stage is available in the code/census-stage directory. It includes multiple regression approaches for mapping census variables to poverty indicators, such as neural networks (NN), support vector regression (SVR), and gradient-boosted decision trees (XGBoost). In addition, an ensemble strategy is implemented to combine the predictions of individual models, improving robustness and generalization performance. 
 
 ## Satellite-based inference stage
 
