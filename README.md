@@ -9,13 +9,13 @@ The pipeline is divided into two main stages:
 
 ## Census-based regression stage
 
-In the second stage, Sentinel-2 satellite imagery is linked to the poverty estimates obtained from the census-based regression stage, enabling prediction at finer spatial resolutions through image-based learning.
 
-The models for this stage are implemented in the code/earth-observations-stage directory and use the spectral and spatial information contained in multispectral Sentinel-2 imagery. This stage incorporates a range of learning paradigms, including convolutional neural networks (CNNs), transformer-based architectures, graph-based methods, and Capsule Attention Networks (CAN). Together, these models capture complex spectral–spatial relationships in satellite data to support scalable, high-resolution poverty mapping.
 
 ## Satellite-based inference stage
 
-In the second stage, Sentinel-2 satellite imagery is linked to the estimated poverty values, enabling poverty prediction at finer spatial resolutions using deep learning models.
+In the second stage, Sentinel-2 satellite imagery is linked to the poverty estimates obtained from the census-based regression stage, enabling prediction at finer spatial resolutions through image-based learning.
+
+The models for this stage are implemented in the code/earth-observations-stage directory and use the spectral and spatial information contained in multispectral Sentinel-2 imagery. This stage incorporates a range of learning paradigms, including convolutional neural networks (CNNs), transformer-based architectures, graph-based methods, and Capsule Attention Networks (CAN). Together, these models capture complex spectral–spatial relationships in satellite data to support scalable, high-resolution poverty mapping.
 
 # Reproducibility and code structure
 
