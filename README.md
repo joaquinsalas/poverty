@@ -12,7 +12,7 @@ In the first stage, a regression framework is trained using census reference dat
 
 The implementation of this stage is available in the code/census-stage directory. It includes multiple regression approaches for mapping census variables to poverty indicators, such as neural networks (NN), support vector regression (SVR), and gradient-boosted decision trees (XGBoost). In addition, an ensemble strategy is implemented to combine the predictions of individual models, improving robustness and generalization performance. 
 
-## Satellite-based inference stage
+## Earth Observations-based inference stage
 
 In the second stage, Sentinel-2 satellite imagery is linked to the poverty estimates obtained from the census-based regression stage, enabling prediction at finer spatial resolutions through image-based learning.
 
