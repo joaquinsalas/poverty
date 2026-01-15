@@ -214,9 +214,7 @@ if __name__ == "__main__":
     eta = gamma
 
     for num_cls in num_clusters:
-        print(f'{num_cls} - {num_clusters}')
-        if( num_cls==80 ):
-            continue
+        print(num_cls)
         
         #apply SDSGC algorithm
         runtimes = 1
