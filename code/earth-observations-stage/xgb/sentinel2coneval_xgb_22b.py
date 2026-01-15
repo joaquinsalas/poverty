@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split, RandomizedSearchCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import r2_score
 from xgboost import XGBRegressor
-from tqdm.auto import tqdm        # ya no hace falta pin_memory=True aquí
+from tqdm.auto import tqdm        # ya no hace falta pin_memory=True aquí_
 
 # ------------------- rutas -------------------------------------------
 if platform.system() == "Windows":
