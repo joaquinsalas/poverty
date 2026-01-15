@@ -56,3 +56,24 @@ CodeCarbon
 The weights for the model can be downloaded from https://drive.google.com/drive/folders/1zfHciQVy74tDgzzAtkCHHnb0wp3xAF0L?usp=sharing
 
 
+## Paper (PDF)
+
+- **Download:** [MDPI Remote Sensing paper (PDF)](https://github.com/joaquinsalas/poverty/tree/main/docs/MDPI_remote_sensing.pdf)
+
+- @misc{salas2026poverty,
+  author       = {Joaquín Salas, Marivel Zea-Ortiz, Pablo Vera, and Danielle Wood},
+  title        = {A Two-Stage Approach to Improve Poverty Mapping Spatial Resolution},
+  year         = {2026},
+  howpublished = {under review Remote Sensing},
+  note         = {Accessed: 2026-01-15}
+}
+
+
+
+
+
+
+
+
+
+
