@@ -24,10 +24,10 @@ num_features = len(selected_features)
 census_in = global_data_dir + 'inegi_coneval_dataset_2020_common_mesh_20240905.csv'
 data = pd.read_csv(census_in)
 
-# Keep only selected features
+# Keep only selected features more comments
 X = data[selected_features]
 
-
+ 
 
 # Define the response variable
 responses = ["calidad_vivienda_2020"]
