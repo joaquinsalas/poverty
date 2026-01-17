@@ -20,9 +20,11 @@ The models for this stage are implemented in the code/earth-observations-stage d
 
 # Reproducibility and code structure
 
-This repository provides the source code required to replicate the experiments conducted for each of the evaluated models. For every architecture, an independent notebook is included.
+Download the BaseDatos_Sentinel2A folder from Google Drive, which contains the images used for the model’s training, validation, and test datasets.
 
-In particular, the notebook based on EfficientNetB3 is proposed as the reference model, serving as the methodological baseline for comparison with the other architectures.
+Once the download is complete, place the BaseDatos_Sentinel2A folder inside the project’s data directory, preserving the original file structure.
+
+Afterward, simply run the program, as the code is already configured to automatically access the data from this location.
 
 # Notebook functionality
 
