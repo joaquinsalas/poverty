@@ -17,11 +17,11 @@ from torch.utils.data import DataLoader, random_split
 from tqdm import tqdm
 
 # ---------------------- Config ----------------------
-IMAGE_DIR = "/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/"
-CSV_FILE = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
-MODEL_PATH = "../models/model_sentinel2coneval_23b_20260106.pth"
-HISTORY_PATH = "../models/training_history_sentinel2coneval_23b_20260106.pth"
-RESULTS_PATH = "../data/sentinel2coneval_test_r2_23b_20260106.csv"
+IMAGE_DIR = "../../../../data/BaseDatos_Sentinel2A/"
+CSV_FILE = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+MODEL_PATH = "../../../../models/model_sentinel2coneval_23b_20260106.pth"
+HISTORY_PATH = "../../../../models/training_history_sentinel2coneval_23b_20260106.pth"
+RESULTS_PATH = "../../../../data/sentinel2coneval_test_r2_23b_20260106.csv"
 
 DUPLICATE_LAST_BAND = False         # duplicate last S2 band to reach 13 channels for ResNet stem
 SCALE_FACTOR = 0.00005              # Sentinel-2 radiometric scaling
