@@ -24,13 +24,13 @@ from tensorflow.keras.applications import DenseNet169
 
 #=============================================================
 #read data file
-df = pd.read_csv('ensemble_inferences_calidad_vivienda_2020.csv')
+df = pd.read_csv('../../../../data/ensemble_inferences_calidad_vivienda_2020.csv')
 y_ref = df[[f"prediction_{i:02d}" for i in range(1, 31)]].mean(axis=1)
 code = df['codigo']
 
 #=============================================================
 #function to load the images
-path = '/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/'
+path = '../../../../data/BaseDatos_Sentinel2A/'
 scale = 0.00005  #scale factor
 def load_images(inds):
     x_imgs = []
