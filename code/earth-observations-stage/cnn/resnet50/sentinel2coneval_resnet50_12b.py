@@ -222,11 +222,11 @@ def main():
     set_seed(SEED)
 
     # Paths
-    csv_path = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
-    image_dir = "/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/"
-    model_path = "../models/best_model_sentinel2coneval_resnet50_12_20260112a.pth"
-    history_path = "../models/training_history_resnet50_12_20260112a.pth"
-    results_path = "../data/test_results_resnet50_12_metrics_20260112a.csv"
+    csv_path = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+    image_dir = "../../../../data/BaseDatos_Sentinel2A/"
+    model_path = "../../../../models/best_model_sentinel2coneval_resnet50_12_20260112a.pth"
+    history_path = "../../../../models/training_history_resnet50_12_20260112a.pth"
+    results_path = "../../../../data/test_results_resnet50_12_metrics_20260112a.csv"
 
     # Prepare data (reproducible split)
     train_ds, val_ds, test_ds = prepare_data(csv_path, image_dir, seed=SEED)
