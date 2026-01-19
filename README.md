@@ -51,17 +51,38 @@ The code is already configured to automatically access the required data and mod
 
 # Requirements
 
-Python ≥ 3.9
+### Core Environment
 
-TensorFlow / PyTorch (model-dependent)
+Python ≥ 3.10
 
-Rasterio, NumPy, Pandas
+### Scientific Computing
 
-Albumentations
+NumPy 
+pandas
+SciPy
+scikit-learn
 
-CodeCarbon
+### Deep Learning
+TensorFlow 
+Keras (bundled with TensorFlow)
 
-(See individual notebooks for detailed dependencies.)
+### Image Processing
+
+OpenCV (cv2)
+Albumentations (data augmentation)
+matplotlib (visualization)
+
+### Geospatial Data
+
+rasterio (reading satellite images)
+
+### Training Utilities
+
+tqdm (progress bars)
+
+### Sustainability 
+
+CodeCarbon (CO₂ emissions tracking)
 
 # Weights
 The weights for the model can be downloaded from https://drive.google.com/drive/folders/1zfHciQVy74tDgzzAtkCHHnb0wp3xAF0L?usp=sharing
