@@ -156,7 +156,7 @@ if __name__ == "__main__":
     
     #load EfficientNet-B3 embbedings from Sentinel-2
     #12 bands projected to 3 bands with Kernel PCA
-    filename = '../../../../data/x_efnb3_kpca_feats.npy'
+    filename = '../data/x_efnb3_kpca_feats.npy'
     X = np.load(filename)
     
     #MCDLT parameters

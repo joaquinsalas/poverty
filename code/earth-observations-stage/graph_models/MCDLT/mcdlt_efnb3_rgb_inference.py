@@ -6,7 +6,7 @@ import random
 
 #======================================================
 #read data file
-df = pd.read_csv('../../../../data/ensemble_inferences_calidad_vivienda_2020.csv')
+df = pd.read_csv('../data/ensemble_inferences_calidad_vivienda_2020.csv')
 y_ref = df[[f"prediction_{i:02d}" for i in range(1, 31)]].mean(axis=1)
 
 #======================================================
@@ -27,8 +27,8 @@ y_test = y_ref[ind_test]
 
 #======================================================
 #read clusters
-path = 'results_imgs_12b/'
-num_clusters = np.arange(10,57)
+path = 'results_efnb3_rgb/'
+num_clusters = np.arange(10,101)
 nc = len(num_clusters)
 y_cls = np.zeros((nrec, nc))
 for k, ncl in enumerate(num_clusters):
@@ -54,13 +54,24 @@ for k, ncl in enumerate(num_clusters):
 #compute performance
 sigma2 = np.var(y_test)
 mse = np.zeros(nc)
+mae = np.zeros(nc)
 R2 = np.zeros(nc)
 for k in range(nc):
     mse[k] = np.mean((y_pred[:,k] - y_test)**2.0)
+    mae[k] = np.mean(np.abs(y_pred[:,k] - y_test))
     R2[k] = 1.0 - mse[k]/sigma2
 
 #======================================================
-#plot results
+#print best result of R^2
+inds = np.argmax(R2)
+
+print(f'Nr. clusters: {num_clusters[inds]}')
+print(f'  RMSE = {np.sqrt(mse[inds]):0.6f}')
+print(f'  MAE = {mae[inds]:0.6f}')
+print(f'  R^2 = {R2[inds]:0.4f}')
+
+#======================================================
+#plot results of R^2 vs nr. clusters
 fig = plt.figure(figsize=(6,4))
 plt.rcParams['font.size'] = '12'
 plt.grid('on')
@@ -71,7 +82,7 @@ indv = ind[np.isnan(R2)==False]
 plt.plot(num_clusters[indv], R2[indv], linewidth=3)
 plt.xlabel('number of clusters')
 plt.ylabel(r'$R^2$', fontsize=16)
-plt.title('Performance of MCDLT')
+plt.title('Performance of MCDLT with EfficientNet-B3 RGB features')
 plt.show()
 
 
