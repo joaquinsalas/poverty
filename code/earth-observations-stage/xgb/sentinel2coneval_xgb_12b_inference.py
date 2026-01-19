@@ -32,10 +32,10 @@ if platform.system() == "Windows":
     MODEL_DIR = r"E:\xgb_models"
     DATA_OUT  = r"E:\data"
 else:
-    IMG_DIR   = "/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/"
-    CSV_IN    = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
-    MODEL_DIR = "../models"
-    DATA_OUT  = "../data"
+    IMG_DIR   = "../../../../data/BaseDatos_Sentinel2A/"
+    CSV_IN    = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+    MODEL_DIR = "../../../../models/"
+    DATA_OUT  = "../../../../data"
 os.makedirs(MODEL_DIR, exist_ok=True)
 os.makedirs(DATA_OUT, exist_ok=True)
 

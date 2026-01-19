@@ -28,11 +28,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 torch.backends.cudnn.benchmark = True
 
 # ---------------------- Config ----------------------
-CSV_PATH      = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
-IMAGE_DIR     = "/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/"
-MODEL_PATH    = "../models/model_sentinel2coneval_vit_12b_20250801.pth"   # pre-trained ViT checkpoint (13-ch)
-RESULTS_PATH  = "../data/sentinel2coneval_vit_12b_r2_test_20250801.csv"   # append test R²
-EMISSIONS_CSV = "../data/emissions/vit_12b_CO2_emissions_per_item_grams_gpu_infer.csv"
+CSV_PATH      = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+IMAGE_DIR     = "../../../../data/BaseDatos_Sentinel2A/"
+MODEL_PATH    = "../../../../models/model_sentinel2coneval_vit_12b_20250801.pth"   # pre-trained ViT checkpoint (13-ch)
+RESULTS_PATH  = "../../../../data/sentinel2coneval_vit_12b_r2_test_20250801.csv"   # append test R²
+EMISSIONS_CSV = "../../../../data/emissions/vit_12b_CO2_emissions_per_item_grams_gpu_infer.csv"
 
 BATCH_SIZE  = 32
 NUM_WORKERS = 4

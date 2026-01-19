@@ -155,7 +155,7 @@ def MCDLT(Avd, c, NITER, Z, alpha, beta, eta):
 if __name__ == "__main__":
     
     #load image features
-    filename = '../data/x_imgs_feats.npy'
+    filename = '../../../../data/x_imgs_feats.npy'
     X = np.load(filename)
     
     #MCDLT parameters

@@ -12,7 +12,7 @@ code = df['codigo']
 
 #=============================================================
 #function to load the images
-path = '/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/'
+path = '../../../../data/BaseDatos_Sentinel2A/'
 scale = 0.00005  #scale factor
 def load_images(inds):
     x_imgs = []

@@ -27,7 +27,7 @@ model.add( GlobalAveragePooling2D() )
 
 #=============================================================
 #read data file
-df = pd.read_csv('ensemble_inferences_calidad_vivienda_2020.csv')
+df = pd.read_csv('../../../../data/ensemble_inferences_calidad_vivienda_2020.csv')
 y_ref = df[[f"prediction_{i:02d}" for i in range(1, 31)]].mean(axis=1)
 code = df['codigo']
 
@@ -51,7 +51,7 @@ def spectral_indices(img):
 
 #=============================================================
 #function to load the images
-path = '/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/'
+path = '../../../../data/BaseDatos_Sentinel2A/'
 scale = 0.00005  #scale factor
 def load_images(inds):
     x_imgs = []
@@ -116,4 +116,4 @@ x_feats = np.array(x_feats)
 #=============================================================
 #save embeddings to numpy file
 x_feats = np.reshape(x_feats, (len(x_feats),-1))
-np.save('../data/x_efnb3_kpca_feats.npy', x_feats)
+np.save('../../../../data/x_efnb3_kpca_feats.npy', x_feats)

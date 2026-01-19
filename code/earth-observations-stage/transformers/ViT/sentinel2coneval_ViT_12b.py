@@ -22,7 +22,7 @@ from torch.optim.lr_scheduler import OneCycleLR
 
 
 # Load tabular data
-csv_file = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
+csv_file = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
 data = pd.read_csv(csv_file)
 data['target'] = data[[f'prediction_{i:02d}' for i in range(1, 31)]].mean(axis=1)
 
@@ -79,7 +79,7 @@ class SatelliteDataset(torch.utils.data.Dataset):
         return np.stack([ndvi, evi, ndwi, ndbi, savi, nbr, evi2, msavi, nmdi, ndi45, si])
 
 # Dataset and DataLoaders
-dataset = SatelliteDataset('/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/', data)
+dataset = SatelliteDataset('../../../../data/BaseDatos_Sentinel2A/', data)
 train_size = int(0.5 * len(dataset))
 val_size = int(0.2 * len(dataset))
 test_size = len(dataset) - train_size - val_size
@@ -158,7 +158,7 @@ for epoch in range(num_epochs):
     if val_r2 > best_r2:
         best_r2 = val_r2
         patience_counter = 0
-        torch.save(model.state_dict(), "../models/model_sentinel2coneval_vit_12b_20250801.pth")
+        torch.save(model.state_dict(), "../../../../models/model_sentinel2coneval_vit_12b_20250801.pth")
     else:
         patience_counter += 1
     if patience_counter > patience:
@@ -166,10 +166,10 @@ for epoch in range(num_epochs):
         break
 
 # Save training history
-torch.save({'train_loss': train_history, 'val_loss': val_history}, "../models/history_sentinel2coneval_vit_12b_20250801.pth")
+torch.save({'train_loss': train_history, 'val_loss': val_history}, "../../../../models/history_sentinel2coneval_vit_12b_20250801.pth")
 
 # Test evaluation
-model.load_state_dict(torch.load("../models/model_sentinel2coneval_vit_12b_20250801.pth"))
+model.load_state_dict(torch.load("../../../../models/model_sentinel2coneval_vit_12b_20250801.pth"))
 model.eval()
 
 test_preds, test_true = [], []
@@ -184,7 +184,7 @@ with torch.no_grad():
 
 print(f"Test R²: {r2_score(test_true, test_preds):.4f}")
 # Save test R² to CSV
-output_path = "../data/sentinel2coneval_vit_12b_r2_test_20250801.csv"
+output_path = "../../../../data/sentinel2coneval_vit_12b_r2_test_20250801.csv"
 with open(output_path, mode="w", newline="") as file:
     writer = csv.writer(file)
     writer.writerow(["Model", "Test_R2"])
