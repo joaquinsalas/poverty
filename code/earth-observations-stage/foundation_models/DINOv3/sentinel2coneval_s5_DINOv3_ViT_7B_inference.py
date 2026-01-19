@@ -32,12 +32,12 @@ except ImportError:
 # ----------------------------
 # Config
 # ----------------------------
-IMG_DIR = '/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/'
-LABEL_CSV = "/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/data/ensemble_inferences_calidad_vivienda_2020.csv"
-MODEL_DIR = "../models"
+IMG_DIR = '../../../../data/BaseDatos_Sentinel2A/'
+LABEL_CSV = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+MODEL_DIR = "../../../../models"
 MODEL_PATH = os.path.join(MODEL_DIR, "s5_dinov3_regressor_ViT_7B.pth")  # checkpoint path
-R2_CSV = "../data/s5_dinov3_test_r2_ViT_7B.csv"
-EMISSIONS_CSV = "../data/emissions/s5_dinov3_ViT_7B_CO2_emissions_per_item_grams_gpu_infer.csv"
+R2_CSV = "../../../../data/s5_dinov3_test_r2_ViT_7B.csv"
+EMISSIONS_CSV = "../../../../data/emissions/s5_dinov3_ViT_7B_CO2_emissions_per_item_grams_gpu_infer.csv"
 
 SEED = 42
 BATCH_SIZE = 32

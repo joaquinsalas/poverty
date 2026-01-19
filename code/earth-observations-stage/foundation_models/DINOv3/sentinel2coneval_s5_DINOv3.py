@@ -25,11 +25,11 @@ from sklearn.decomposition import PCA
 # ----------------------------
 # Config
 # ----------------------------
-IMG_DIR = '/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/'   # where {codigo}.tif live
-LABEL_CSV = "/mnt/data-r1/JoaquinSalas/Documents/informs/research/2023.11.16census/2024.07.29malla470/data/ensemble_inferences_calidad_vivienda_2020.csv"
-MODEL_DIR = "../models"
+IMG_DIR = '../../../../data/BaseDatos_Sentinel2A/'   # where {codigo}.tif live
+LABEL_CSV = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+MODEL_DIR = "../../../../models"
 MODEL_PATH = os.path.join(MODEL_DIR, "s5_dinov3_regressor_dinov3.pth")  # checkpoint path
-R2_CSV = "../data/s5_dinov3_test_r2.csv"
+R2_CSV = "../../../../data/s5_dinov3_test_r2.csv"
 
 # Put these near your config:
 SAT_MEAN = (0.430, 0.411, 0.296)
