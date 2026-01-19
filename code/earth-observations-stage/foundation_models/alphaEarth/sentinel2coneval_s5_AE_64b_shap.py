@@ -21,11 +21,11 @@ from s5 import S5Block  # pip/your local s5 module
 # ----------------------------
 # Config
 # ----------------------------
-IMG_DIR   = "/mnt/data-r1/data/alphaEarth"   # {codigo}.tif live here
-LABEL_CSV = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
-MODEL_PATH = "../models/s5_alphaEarth_regressor.pth"  # trained checkpoint (required)
+IMG_DIR   = "../../../../data/alphaEarth"   # {codigo}.tif live here
+LABEL_CSV = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+MODEL_PATH = "../../../../models/s5_alphaEarth_regressor.pth"  # trained checkpoint (required)
 
-OUT_DIR = "../data/shap_s5_alphaEarth/"
+OUT_DIR = "../../../../data/shap_s5_alphaEarth/"
 FIG_DIR = os.path.join(OUT_DIR, "figures")
 
 SEED = 42

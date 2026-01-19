@@ -210,11 +210,11 @@ def quick_stats(name, x):
 
 # ---------------------- Main ----------------------
 def main():
-    csv_path   = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
-    image_dir  = "/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/"
-    model_path = "../models/best_model_sentinel2coneval_resnet50_12_20250926.pth"
+    csv_path   = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+    image_dir  = "../../../../data/BaseDatos_Sentinel2A/"
+    model_path = "../../../../models/best_model_sentinel2coneval_resnet50_12_20250926.pth"
 
-    out_dir = "../data/shap_resnet50_12_20250926/"
+    out_dir = "../../../../data/shap_resnet50_12_20250926/"
     fig_dir = os.path.join(out_dir, "figures")
     os.makedirs(fig_dir, exist_ok=True)
 

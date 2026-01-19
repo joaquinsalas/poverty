@@ -16,11 +16,11 @@ from s5 import S5Block  # pip/your local s5 module
 # ----------------------------
 # Config
 # ----------------------------
-IMG_DIR = "/mnt/data-r1/data/alphaEarth"   # where {codigo}.tif live
-LABEL_CSV = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
-MODEL_DIR = "../models"
+IMG_DIR = "../../../../data/alphaEarth"   # where {codigo}.tif live
+LABEL_CSV = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+MODEL_DIR = "../../../../models"
 MODEL_PATH = os.path.join(MODEL_DIR, "s5_alphaEarth_regressor.pth")  # checkpoint path
-R2_CSV = "../data/s5_alphaEarth_test_r2.csv"
+R2_CSV = "../../../../data/s5_alphaEarth_test_r2.csv"
 
 SEED = 42
 BATCH_SIZE = 16          # keep modest, sequences can be long

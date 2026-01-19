@@ -25,12 +25,12 @@ except ImportError:
     print("WARNING: codecarbon not installed. `pip install codecarbon` to record emissions.")
 
 # ---------------------- Config ----------------------
-IMAGE_DIR    = "/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/"
-CSV_FILE     = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
-MODEL_PATH   = "../models/model_sentinel2coneval_23b_20250731.pth"
-HISTORY_PATH = "../models/training_history_sentinel2coneval_23b_20250731.pth"  # unused here but kept
-RESULTS_PATH = "../data/sentinel2coneval_test_r2_23b_20250731.csv"             # R² CSV (append)
-EMISSIONS_CSV= "../data/emissions/resnet50_23b_CO2_emissions_per_item_grams_gpu_infer.csv"
+IMAGE_DIR    = "../../../../data/BaseDatos_Sentinel2A/"
+CSV_FILE     = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+MODEL_PATH   = "../../../../models/model_sentinel2coneval_23b_20250731.pth"
+HISTORY_PATH = "../../../../models/training_history_sentinel2coneval_23b_20250731.pth"  # unused here but kept
+RESULTS_PATH = "../../../../data/sentinel2coneval_test_r2_23b_20250731.csv"             # R² CSV (append)
+EMISSIONS_CSV= "../../../../data/emissions/resnet50_23b_CO2_emissions_per_item_grams_gpu_infer.csv"
 
 DUPLICATE_LAST_BAND = True        # 12 bands + duplicate -> 13
 SCALE_FACTOR        = 0.00005     # Sentinel-2 radiometric scaling

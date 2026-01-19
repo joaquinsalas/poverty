@@ -33,16 +33,16 @@ torch.backends.cudnn.benchmark = True
 
 
 # ---------------------- Config ----------------------
-IMAGE_DIR    = "/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/"
-CSV_FILE     = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
+IMAGE_DIR    = "../../../../data/BaseDatos_Sentinel2A/"
+CSV_FILE     = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
 
 
-MODEL_PATH   = "../models/model_sentinel2coneval_23b_20260106.pth"
+MODEL_PATH   = "../../../../models/model_sentinel2coneval_23b_20260106.pth"
 
-RESULTS_PATH  = "../data/sentinel2coneval_test_metrics_23b_20260106.csv"
-EMISSIONS_CSV = "../data/emissions/resnet50_23b_CO2_emissions_per_item_grams_gpu_infer_20260106.csv"
+RESULTS_PATH  = "../../../../data/sentinel2coneval_test_metrics_23b_20260106.csv"
+EMISSIONS_CSV = "../../../../data/emissions/resnet50_23b_CO2_emissions_per_item_grams_gpu_infer_20260106.csv"
 
-OUT_DIR = "../data/shap_resnet50_23b_20260106/"
+OUT_DIR = "../../../../shap_resnet50_23b_20260106/"
 FIG_DIR = os.path.join(OUT_DIR, "figures")
 
 DUPLICATE_LAST_BAND = False  # MUST match training script (False)

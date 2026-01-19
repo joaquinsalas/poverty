@@ -151,10 +151,10 @@ def run_inference_and_emissions(model, test_loader, model_path, emissions_csv,
 # ---------------------- Main ----------------------
 def main():
     # Paths (edit if needed)
-    csv_path     = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
-    image_dir    = "/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/"
-    model_path   = "../models/best_model_sentinel2coneval_resnet50_12_20250926.pth"
-    emissions_csv= "../data/emissions/resnet50_12_CO2_emissions_per_item_grams_gpu_infer.csv"
+    csv_path     = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+    image_dir    = "../../../../data/BaseDatos_Sentinel2A/"
+    model_path   = "../../../../models/best_model_sentinel2coneval_resnet50_12_20250926.pth"
+    emissions_csv= "../../../../data/emissions/resnet50_12_CO2_emissions_per_item_grams_gpu_infer.csv"
 
     # Data: we only need the test split for inference
     _, _, test_ds = prepare_data(csv_path, image_dir)
