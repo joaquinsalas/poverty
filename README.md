@@ -57,19 +57,27 @@ Python ≥ 3.10
 
 ### Scientific Computing
 
-NumPy 
+NumPy
+
 pandas
+
 SciPy
+
 scikit-learn
 
+
 ### Deep Learning
+
 TensorFlow 
+
 Keras (bundled with TensorFlow)
 
 ### Image Processing
 
 OpenCV (cv2)
+
 Albumentations (data augmentation)
+
 matplotlib (visualization)
 
 ### Geospatial Data
