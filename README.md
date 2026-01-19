@@ -26,19 +26,28 @@ Once the download is complete, place the BaseDatos_Sentinel2A folder inside the 
 
 Afterward, simply run the program, as the code is already configured to automatically access the data from this location.
 
-# Notebook functionality
+# Data and Model Directory Setup
 
-Each notebook implements the following components in a structured and reproducible manner:
+## Model Files
 
-1.- Preprocessing and normalization of Sentinel-2 multispectral imagery.
+Download the models folder and place it in the root directory of the poverty project.
+Ensure that the original directory structure and file names are preserved, as the code expects this layout to correctly locate the pretrained models and checkpoints.
 
-2.- Computation of spectral indices and construction of multi-channel inputs.
+## Sentinel-2 Dataset
 
-3.- Model-specific training configurations and optimization strategies.
+Download the BaseDatos_Sentinel2A folder from Google Drive, which contains the Sentinel-2 images used for the model’s training, validation, and test datasets.
 
-4.- Model performance evaluation using standardized statistical metrics (MSE and R²).
+Once the download is complete, move the BaseDatos_Sentinel2A folder into the project’s data directory, keeping the original internal structure unchanged.
 
-5.- Estimation of the computational environmental impact using CodeCarbon.
+## AlphaEarth Dataset
+
+Download the AlphaEarth folder from Google Drive and store it inside the project’s data directory.
+Do not rename files or modify the internal organization of this folder, as it is directly referenced by the data loading pipeline.
+
+## Execution
+
+After organizing the directories as described above, simply run the program.
+The code is already configured to automatically access the required data and models from these locations, and no additional path configuration is necessary.
 
 # Requirements
 
