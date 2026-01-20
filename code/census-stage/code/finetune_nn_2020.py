@@ -12,7 +12,7 @@ import os
 
 # Set relevant directory locations based on the operating system
 global_data_dir ='../data/'
-models_dir ='../models/'
+models_dir ='../../../models/'
 
 
 # Load data from CSV

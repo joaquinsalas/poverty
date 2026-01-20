@@ -13,7 +13,7 @@ from sklearn.feature_selection import RFE
 
 #set relevant directory locations
 global_data_dir ='../data/'
-models_dir ='../models/'
+models_dir ='../../../models/'
 figures_dir = '../figures/'
 
 

@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
 # Set relevant directory locations
 global_data_dir = '../data/'
-models_dir = '../models/'
+models_dir = '../../../models/'
 
 # Load data from CSV
 census_in = global_data_dir + 'inegi_coneval_dataset_2020_common_mesh_20240905.csv'

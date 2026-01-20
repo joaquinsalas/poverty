@@ -12,8 +12,8 @@ import os
 
 # Set relevant directory locations
 common_data_dir = '../../../../data/INEGI_CPV2020_n9/'
-global_data_dir = '../../../../data/'
-models_dir = '../../../../models/'
+global_data_dir = '../data/'
+models_dir = '../../../models/'
 
 # Define the Neural Network model (same as used in the individual NN model)
 class Net(nn.Module):

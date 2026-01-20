@@ -9,7 +9,7 @@ import os
 
 # Set relevant directory locations
 global_data_dir = '../data/'
-models_dir = '../models/'
+models_dir = '../../../models/'
 
 # Load feature importance file and filter features based on a threshold
 importance_file = global_data_dir + 'shap_feature_importance_calidad_vivienda_2020.csv'
