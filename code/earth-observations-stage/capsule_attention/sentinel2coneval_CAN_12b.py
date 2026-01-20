@@ -320,11 +320,11 @@ def evaluate_model(model, test_loader, model_path, results_path):
 
 def main():
     # Paths
-    csv_path = "../data/ensemble_inferences_calidad_vivienda_2020.csv"
-    image_dir = "/mnt/data-r1/data/sentinel_images/BaseDatos_Sentinel2A/"
-    model_path = "../models/best_model_CAN_13ch.pth"
-    history_path = "../models/training_history_CAN_13ch.pth"
-    results_path = "../data/test_results_CAN_13ch_r2.csv"
+    csv_path = "../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+    image_dir = "../../../data/BaseDatos_Sentinel2A"
+    model_path = "../../../models/best_model_CAN_13ch.pth"
+    history_path = "../../../models/training_history_CAN_13ch.pth"
+    results_path = "../../../data/test_results_CAN_13ch_r2.csv"
 
     # Prepare data
     train_ds, val_ds, test_ds = prepare_data(csv_path, image_dir)
