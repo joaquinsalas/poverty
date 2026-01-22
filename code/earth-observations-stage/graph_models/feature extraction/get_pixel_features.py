@@ -49,5 +49,5 @@ x_res = np.reshape(x_res, (len(x_res), -1))
 
 #=============================================================
 #save image features to numpy file
-np.save('../data/x_imgs_feats.npy', x_res)
+np.save('../../../../data/x_imgs_feats.npy', x_res)
 

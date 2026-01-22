@@ -20,9 +20,9 @@ if platform.system() == "Windows":
     CSV_IN   = r"E:\ensemble_inferences_calidad_vivienda_2020.csv"
     MODEL_DIR= r"E:\xgb_models"
 else:
-    IMG_DIR  = "../../../../data/BaseDatos_Sentinel2A/"
-    CSV_IN   = "../../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
-    MODEL_DIR= "../../../../models"
+    IMG_DIR  = "../../../data/BaseDatos_Sentinel2A/"
+    CSV_IN   = "../../../data/ensemble_inferences_calidad_vivienda_2020.csv"
+    MODEL_DIR= "../../../models"
 os.makedirs(MODEL_DIR, exist_ok=True)
 
 # ------------------- 1. Cargar meta-datos y objetivo -----------------
@@ -146,5 +146,5 @@ with open(os.path.join(MODEL_DIR, "scaler_target_23.pkl"), "wb") as f:
 pd.DataFrame([{
     "r2_test": r2,
     **search.best_params_
-}]).to_csv(os.path.join('../../../../data/', "xgb_23b_target_summary.csv"), index=False)
+}]).to_csv(os.path.join('../../../data/', "xgb_23b_target_summary.csv"), index=False)
 print("\nModel & summary saved in", MODEL_DIR)
